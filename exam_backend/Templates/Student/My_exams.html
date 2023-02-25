@@ -1,0 +1,42 @@
+<script type=”text/javscript”>
+
+    var var1 = 0;
+    
+    var var2 = 0;
+    
+</script>
+
+<html>
+
+    {% extends "base.html" %}
+
+    {% block content %}
+
+
+    <a href="login_to_exam_page">Login to Exam </a><br>
+    <table>
+        <thead>
+            <tr>
+            <th style="width : 100px">Exam</th>
+            <th style="width : 100px">Marks</th>
+            <th style="width : 150px">Max marks</th>
+            <th style="width : 100px">Rank</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for exam in exam_list %}
+            <tr>
+                <td style="width : 100px"><a href ="/view_myexam_responses/{{exam.4}}" >{{exam.0}}</a></td>
+                <td style="width : 100px">{{exam.1}}</td>
+                <td style="width : 150px">{{exam.2}}</td>
+                <td style="width : 100px">{{exam.3}}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    
+
+    {% endblock %}
+
+
+</html>

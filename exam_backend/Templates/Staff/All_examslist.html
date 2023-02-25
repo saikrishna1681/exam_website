@@ -1,0 +1,36 @@
+
+<html>
+
+    {% extends "staff_base.html" %}
+
+    {% block content %}
+
+    <table>
+        <thead>
+            <tr>
+            <th style="width : 200px">Exam</th>
+            <th style="width : 200px">Update exam data</th>
+            <th style="width : 200px">Grade exam </th>
+            <th style="width : 200px">Exam Result</th>
+            <!-- <th style="width : 200px">Marks</th>
+            <th style="width : 150px">Max marks</th>
+            <th style="width : 200px">Rank</th> -->
+            </tr>
+        </thead>
+        <tbody>
+            {% for exam in exam_data %}
+            <tr>
+                <td style="width : 200px"><a href ="/frontend/#/{{exam.0}}/view" > {{exam.1}}</a></td>
+                <td style="width : 200px"><a href ="/staff/update_examdata/{{exam.0}}"> Update exam data </a></td>
+                <td style="width : 200px"><a href ="/staff/grade_exam/{{exam.0}}"> Grade Exam</a></td>
+                <td style="width : 200px"><a href ="/staff/view_examresult/{{exam.0}}"> View Exam Result</a></td>
+                <!-- <td style="width : 200px">{{exam.1}}</td>
+                <td style="width : 150px">{{exam.2}}</td>
+                <td style="width : 200px">{{exam.3}}</td> -->
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    {% endblock %}
+
+</html>

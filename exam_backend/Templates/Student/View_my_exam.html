@@ -1,0 +1,26 @@
+<html>
+
+    {% extends "base.html" %}
+
+    {% block content %}
+    
+    <a href="login_to_exam_page">Login to Exam </a><br><br><br>
+
+    <label>Your Marks : {{student_marks}}</label><br>
+    <label>Your Rank : {{student_rank}}</label><br>
+    <label>Exam name : {{exam_name}}</label><br><hr>
+
+    {% for i in data_list %}
+
+        <label>Question number : {{i.0}}</label>
+        <p>{{i.1}}</p><br>
+        <label>Answer key : {{i.2}}</label><br>
+        <label>Your Answer : {{i.3}}</label><br><hr>
+
+    {% endfor %}
+    
+
+    {% endblock %}
+
+
+</html>

@@ -1,0 +1,39 @@
+
+<html>
+
+{% extends "staff_base.html" %}
+
+{% block content %}
+
+<h3>Exam name : {{exam_name}}</h3>
+<h3>Exam ID : {{exam_id}}</h3>
+
+<table>
+    <thead>
+        <tr>
+        <th style="width : 200px">Student ID</th>
+        <th style="width : 200px">Student name </th>
+        <th style="width : 200px">Marks </th>
+        <th style="width : 200px">Rank</th>
+        <!-- <th style="width : 200px">Marks</th>
+        <th style="width : 150px">Max marks</th>
+        <th style="width : 200px">Rank</th> -->
+        </tr>
+    </thead>
+    <tbody>
+        {% for student in student_data %}
+        <tr>
+            <td style="width : 200px"> {{student.0}} </td>
+            <td style="width : 200px"> {{student.1}} </td>
+            <td style="width : 200px"> {{student.2}} </td>
+            <td style="width : 200px"> {{student.3}} </td>
+            <!-- <td style="width : 200px">{{exam.1}}</td>
+            <td style="width : 150px">{{exam.2}}</td>
+            <td style="width : 200px">{{exam.3}}</td> -->
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}
+
+</html>

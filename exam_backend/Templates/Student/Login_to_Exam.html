@@ -1,0 +1,28 @@
+<html>
+
+    {% extends "base.html" %}
+
+    {% block content %}
+
+    
+    <form action="/login_to_exam", method="POST">
+
+        {% csrf_token %}
+    
+        <label>exam_id</label>
+        <input type="number"  placeholder="exam_id" name="exam_id">
+    
+        <br><br>
+        <label>password</label>
+        <input type="password" name="password" placeholder="password"><br><br>
+    
+        <button type="submit">Login to exam </button>
+    
+    
+    </form>
+    
+
+    {% endblock %}
+
+
+</html>
